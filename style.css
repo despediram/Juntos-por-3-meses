@@ -1,0 +1,161 @@
+/* Configuração básica */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #4b0082, #800080);
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Container principal */
+#game-container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Perguntas */
+#question-container {
+    margin: 20px 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/* Respostas */
+#answers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.answer-btn {
+    background: #6200ea;
+    color: white;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.answer-btn:hover {
+    background: #3700b3;
+    transform: scale(1.05);
+}
+
+.answer-btn.correct {
+    background: #00c853;
+    box-shadow: 0 4px 15px rgba(0, 200, 83, 0.6);
+}
+
+.answer-btn.wrong {
+    background: #d50000;
+    box-shadow: 0 4px 15px rgba(213, 0, 0, 0.6);
+}
+
+/* Feedback - Texto rolável */
+#feedback {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background: rgba(178, 5, 201, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    max-height: 40vh; /* Altura máxima relativa ao viewport */
+    overflow-y: auto;
+}
+
+/* Barra de rolagem personalizada */
+#feedback::-webkit-scrollbar {
+    width: 8px;
+}
+
+#feedback::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#feedback::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #800080, #4b0082);
+    border-radius: 10px;
+}
+
+#feedback::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #4b0082, #800080);
+}
+
+/* Botão de próxima pergunta */
+#next-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #ff8c00;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#next-btn:disabled {
+    background: #a5a5a5;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#next-btn:hover:enabled {
+    background: #ff6f00;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    #game-container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    #question-container {
+        font-size: 1rem;
+    }
+
+    .answer-btn {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    #feedback {
+        font-size: 1rem;
+    }
+
+    #next-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
