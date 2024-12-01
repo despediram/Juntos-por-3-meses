@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             question: "Qual cor eu sei que você ama?",
             answers: ["Azul", "Rosa", "Roxo", "Verde"],
             correct: 2,
-            reward: "Sim, o roxo é a sua cor linda, que ilumina tudo ao seu redor! 💜",
+            reward: "Sim, o roxo é a sua cor favorita, corzinha linda, que ilumina tudo ao seu redor! 💜",
         },
     ];
 
