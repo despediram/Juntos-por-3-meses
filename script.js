@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             question: "Qual é o dia que começamos a namorar?",
             answers: ["12 de outubro", "12 de novembro", "12 de setembro", "12 de agosto"],
-            correct: 0,
+            correct: 2,
             reward: "Exatamente, o dia que mudou nossas vidas para sempre. 💜",
         },
         {
